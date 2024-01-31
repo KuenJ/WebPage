@@ -1,0 +1,6 @@
+footer {
+  background-color: #252525;
+  color: #ccc;
+  position: relative;
+  z-index: 10;
+}
