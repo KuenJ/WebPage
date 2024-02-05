@@ -1,0 +1,6 @@
+{
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+  "appService.defaultWebAppToDeploy": "/subscriptions/397a9ff9-dd74-4fb3-9a93-35366a762ee3/resourceGroups/cloud-shell-storage-southeastasia/providers/Microsoft.Web/sites/ILPUM",
+  "appService.deploySubpath": "myExpressApp",
+  "liveServer.settings.port": 3001
+}

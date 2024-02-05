@@ -1,6 +1,17 @@
+body {
+  margin: 0px;
+}
 footer {
   background-color: #252525;
   color: #ccc;
   position: relative;
   z-index: 10;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.td-button {
+  text-align: right;
 }

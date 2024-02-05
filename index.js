@@ -1,11 +1,35 @@
-const http = require("http");
-const port = process.env.PORT || 3000;
+let inputDate = document.getElementById("input-date");
+let sensorAddButton = document.getElementById("sensor-add-button");
 
-http
-  .createServer(function (request, response) {
-    response.writeHead(200, { "Content-Type": "text/plain" });
-    response.end("Hello World!");
-  })
-  .listen(port);
+let SensorArray = [];
 
-console.log(`Server running at http://localhost:${port}`);
+sensorAddButton.addEventListener("click", addSensorList);
+
+function addSensorList() {
+  let task = {
+    TaskContent: inputDate.value,
+  };
+  SensorArray.push(task);
+  console.log(SensorArray);
+  render();
+}
+
+function render() {
+  let resultHtml = "";
+  for (let i = 0; i < SensorArray.length; i++) {
+    resultHtml += `<tbody id="sensor-dashboard">
+            <tr> 
+              <th scope="row">${SensorArray[i].TaskContent}</th>
+              <td>35</td>
+              <td>26</td>
+              <td>2024-02-05</td>
+              <td>12:00</td>
+              <td class="td-button">
+                <button class="btn btn-secondary">수정</button>
+                <button class="btn btn-danger">삭제</button>
+              </td>
+            </tr>
+          </tbody>`;
+  }
+  document.getElementById("sensor-dashboard").innerHTML = resultHtml;
+}
