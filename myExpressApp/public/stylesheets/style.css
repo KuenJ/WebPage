@@ -1,7 +1,9 @@
+body {
+  margin: 0px;
+}
 footer {
   background-color: #252525;
   color: #ccc;
   position: relative;
   z-index: 10;
 }
-
